@@ -6,5 +6,5 @@
 ## References
 
  - [Directl link to text file](https://www.treasury.gov/ofac/downloads/sdnlist.txt)
- - Directory of lists](https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists)
-  - [US Treasury FAQ](https://home.treasury.gov/policy-issues/financial-sanctions/faqs/topic/1626)
+ - [Directory of lists](https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists)
+ - [US Treasury FAQ](https://home.treasury.gov/policy-issues/financial-sanctions/faqs/topic/1626)
