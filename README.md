@@ -7,7 +7,7 @@ A list of known blockchain addresses.
  - The db schema is constantly evolving, we update our database according to the schema.json file 
 
 - Most recent schema sql statement : 
-  CREATE TABLE blockping ( Address VARCHAR, Risk VARCHAR, Source_url VARCHAR , Source_name VARCHAR, Source_date date , Added_date date,Meta VARCHAR  );
+  CREATE TABLE blockping ( Address VARCHAR, Risk VARCHAR, Source_url VARCHAR , Source_name VARCHAR, Source_date VARCHAR , Added_date VARCHAR,Meta VARCHAR  );
  
 ## Generating the final list of addresses 
 
@@ -22,6 +22,9 @@ A list of known blockchain addresses.
   ![image](https://user-images.githubusercontent.com/27244768/174452304-bb6db2cb-dd18-42ba-97ae-f2dacd112d56.png)
 
  - Finally we browse and import the file to the database
+
+  ![image](https://user-images.githubusercontent.com/27244768/174452575-71e4b183-7a0d-4e88-8ce2-6e691bf74e10.png)
+
 
 
 **Ethereum Addresses
