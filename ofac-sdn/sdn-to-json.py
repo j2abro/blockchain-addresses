@@ -22,7 +22,7 @@ with open("sdnlist.txt") as f:
 
             words = second.split()
             for addr in words:
-                if '0x' in addr:
+                if 'c' in addr:
                     i += 1
                     # print('--->', i, addr, category, meta)
                     obj = {

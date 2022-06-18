@@ -1,12 +1,12 @@
 
 {
-    "address": "str",
-    "risk": "str",
-    "source_url": "str",
-    "source_name": "str",
-    "source_date": "date",
-    "added_date": "date",
-    "meta": {}
+    "Address": "str",
+    "Risk": "Info",
+    "Source_url": "str",
+    "Source_name": "str",
+    "Source_date": "date",
+    "Added_date": "date",
+    "Meta": {}
 
 }
 
