@@ -13,7 +13,7 @@ Database fields:
 
 ## Parsing celsius
  - Run parse_celsius.py to generate the final address list for celsius
- - A new CSV file address_list_celsius.csv is generated containing the addresses which conforms to the defined db schema 
+ - A new CSV file address_list.csv is generated containing the addresses which conforms to the defined db schema 
 
 
 

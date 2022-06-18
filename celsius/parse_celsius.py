@@ -15,7 +15,7 @@ schema = open(os.path.join( parent_path  ,'Schema.json'))
 # a dictionary
 data = json.load(schema)
 
-outfile = open('address_list_celsius.csv', "w", encoding="utf-8", newline='')
+outfile = open('address_list.csv', "w", encoding="utf-8", newline='')
 
 # create the csv writer
 writer = csv.writer(outfile, delimiter=",")

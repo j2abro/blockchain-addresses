@@ -22,7 +22,7 @@ with open('addresses-darklist.json', 'r') as j:
 
 
 
-outfile = open('address_list_etherWallet.csv', "w", encoding="utf-8", newline='')
+outfile = open('address_list.csv', "w", encoding="utf-8", newline='')
 
 # create the csv writer
 writer = csv.writer(outfile, delimiter=",")

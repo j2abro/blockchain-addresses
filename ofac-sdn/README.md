@@ -5,7 +5,7 @@
 
 ## Parsing ofac-sdn 
  - Run parse_ofac-sdn.py to generate the final address list for ofac-sdn
- - A new CSV file address_list_ofac.csv is generated containing the addresses which conforms to the defined db schema 
+ - A new CSV file address_list.csv is generated containing the addresses which conforms to the defined db schema 
 
 
 
