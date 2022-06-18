@@ -43,7 +43,7 @@ with open('ofac_sdn.csv', 'r') as f:
             elif (key == "Source_date"):
                 dictionary[key] = "06/17/2022"
             elif (key == "Added_date"):
-                dictionary[key] = datetime.datetime.now().date()
+                dictionary[key] = datetime.datetime.now().date().strftime('%m/%d/%Y')
             elif (key == "Meta"):
                 dictionary[key] = item["meta"]
 
