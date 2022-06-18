@@ -15,71 +15,46 @@ schema = open(os.path.join( parent_path  ,'Schema.json'))
 # a dictionary
 data = json.load(schema)
 
-outfile = open('address_list_ofac.csv', "w", encoding="utf-8", newline='')
+
+
+with open('addresses-darklist.json', 'r') as j:
+    address_json = json.loads(j.read())
+
+
+
+outfile = open('address_list_etherWallet.csv', "w", encoding="utf-8", newline='')
 
 # create the csv writer
 writer = csv.writer(outfile, delimiter=",")
 
-with open('ofac_sdn.csv', 'r') as f:
 
 
-    DictReader_obj = csv.DictReader(f)
+writer.writerow(list(data.keys()))
 
-    writer.writerow(list(data.keys()))
-    for item in DictReader_obj:
+for addr in address_json  :
 
-        dictionary = {}
-
-        for key,value in data.items() :
-
-            if ( key == "Address") :
-              dictionary[key] = item["address"]
-            elif ( key =="Risk") :
-                dictionary[key] = "Info"
-            elif (key == "Source_url"):
-                dictionary[key] = "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists"
-            elif (key == "Source_name"):
-                dictionary[key] = item["category"]
-            elif (key == "Source_date"):
-                dictionary[key] = "06/17/2022"
-            elif (key == "Added_date"):
-                dictionary[key] = datetime.datetime.now().date().strftime('%m/%d/%Y')
-            elif (key == "Meta"):
-                dictionary[key] = item["meta"]
-
-        writer.writerow(list(dictionary.values()))
+    dictionary = {}
 
 
+    for key, value in data.items():
 
+        if (key == "Address"):
+            dictionary[key] = addr["address"]
+        elif (key == "Risk"):
+            dictionary[key] = "Info"
+        elif (key == "Source_url"):
+            dictionary[
+                key] = "https://github.com/MyEtherWallet/"
+        elif (key == "Source_name"):
+            dictionary[key] = "ether-wallet"
+        elif (key == "Source_date"):
+            dictionary[key] = addr["date"]
+        elif (key == "Added_date"):
+            dictionary[key] = datetime.datetime.now().date().strftime('%m/%d/%Y')
+        elif (key == "Meta"):
+            dictionary[key] = addr["comment"]
+
+    writer.writerow(list(dictionary.values()))
 
 
 
-    exit()
-
-
-
-
-
-
-
-
-
-with open('out.csv','w') as outfile:
-
-
-    with open('ofac_sdn.csv','r') as f:
-
-
-        writer = csv.writer(outfile)
-
-        DictReader_obj = csv.DictReader(f)
-
-        for item in DictReader_obj:
-
-            writer.writerow(item)
-    exit()
-
-
-
-# Closing file
-f.close()

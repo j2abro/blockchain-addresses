@@ -48,38 +48,3 @@ with open('ofac_sdn.csv', 'r') as f:
                 dictionary[key] = item["meta"]
 
         writer.writerow(list(dictionary.values()))
-
-
-
-
-
-
-    exit()
-
-
-
-
-
-
-
-
-
-with open('out.csv','w') as outfile:
-
-
-    with open('ofac_sdn.csv','r') as f:
-
-
-        writer = csv.writer(outfile)
-
-        DictReader_obj = csv.DictReader(f)
-
-        for item in DictReader_obj:
-
-            writer.writerow(item)
-    exit()
-
-
-
-# Closing file
-f.close()
