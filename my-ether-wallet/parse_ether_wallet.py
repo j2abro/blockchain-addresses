@@ -50,7 +50,7 @@ for addr in address_json  :
         elif (key == "Source_date"):
             dictionary[key] = addr["date"]
         elif (key == "Added_date"):
-            dictionary[key] = datetime.datetime.now().date().strftime('%m/%d/%Y')
+            dictionary[key] = datetime.datetime.now().date().strftime('%Y/%m/%d')
         elif (key == "Meta"):
             dictionary[key] = addr["comment"]
 

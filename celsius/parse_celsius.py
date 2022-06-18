@@ -15,12 +15,12 @@ schema = open(os.path.join( parent_path  ,'Schema.json'))
 # a dictionary
 data = json.load(schema)
 
-outfile = open('address_list_ofac.csv', "w", encoding="utf-8", newline='')
+outfile = open('address_list_celsius.csv', "w", encoding="utf-8", newline='')
 
 # create the csv writer
 writer = csv.writer(outfile, delimiter=",")
 
-with open('ofac_sdn.csv', 'r') as f:
+with open('CelsiusApprentWallets.csv', 'r') as f:
 
 
     DictReader_obj = csv.DictReader(f)
@@ -33,19 +33,19 @@ with open('ofac_sdn.csv', 'r') as f:
         for key,value in data.items() :
 
             if ( key == "Address") :
-              dictionary[key] = item["address"]
+              dictionary[key] = item["Wallet"]
             elif ( key =="Risk") :
                 dictionary[key] = "Info"
             elif (key == "Source_url"):
-                dictionary[key] = "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists"
+                dictionary[key] = "https://twitter.com/lawmaster/status/1536300771020529665"
             elif (key == "Source_name"):
-                dictionary[key] = item["category"]
+                dictionary[key] = "Wallet addresses for Celsius DeFi lender (Not validated)"
             elif (key == "Source_date"):
-                dictionary[key] = "06/17/2022"
+                dictionary[key] = "2022/06/13"
             elif (key == "Added_date"):
-                dictionary[key] = datetime.datetime.now().date().strftime('%m/%d/%Y')
+                dictionary[key] = datetime.datetime.now().date().strftime('%Y/%m/%d')
             elif (key == "Meta"):
-                dictionary[key] = item["meta"]
+                dictionary[key] = "Amount held :" + str(item['Amount held']) + " |  Notes : "+str(item["Notes"])
 
         writer.writerow(list(dictionary.values()))
 
