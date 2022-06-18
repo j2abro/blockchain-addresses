@@ -5,7 +5,7 @@ A list of known blockchain addresses.
 
 
  - The db schema is constantly evolving, we update our database according to the schema.json file 
- - 
+ 
 ## Generating the final list of addresses 
 
  - Each folder contains different files and tools for parsing and generating the address
