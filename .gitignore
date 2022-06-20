@@ -2,6 +2,9 @@
 # ignore any venv dirs at any level
 env
 **/env
+#ingore env vars (with name/pass/keys, etc)
+.env
+**/.env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
