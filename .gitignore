@@ -1,4 +1,7 @@
 .DS_Store
+# ignore any venv dirs at any level
+env
+**/env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
